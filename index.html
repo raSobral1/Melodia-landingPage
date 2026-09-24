@@ -1,417 +1,674 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/styles/global.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Melodia</title>
-  </head>
+  <link rel="stylesheet" href="/styles/global.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" />
 
-  <body class="m-0 min-h-screen bg-[#05070D] text-[#F8FAFC]">
-    <header
-      id="cabecalho"
-      class="fixed inset-x-0 top-0 z-50 h-20 w-full bg-transparent transition-all duration-300 ease-in-out"
-    >
-      <div
-        class="mx-auto flex h-full max-w-7xl items-center justify-between px-5 md:px-8"
-      >
-        <!-- Logo principal melodia -->
-        <a
-          href="#inicio"
-          class="flex items-center gap-2 text-xl font-bold tracking-tight text-[#F8FAFC] transition-colors hover:text-[#38BDF8] md:text-2xl"
-        >
-          <i
-            class="fa-solid fa-music text-lg text-[#38BDF8]"
-            aria-hidden="true"
-          ></i>
+  <title>Melodia</title>
+</head>
 
-          <span> Melodia<span class="text-[#38BDF8]">.</span> </span>
+<body class="m-0 min-h-screen bg-[#05070D] text-[#F8FAFC]">
+  <header id="cabecalho"
+    class="fixed inset-x-0 top-0 z-50 h-20 w-full bg-transparent transition-all duration-300 ease-in-out">
+    <div class="mx-auto flex h-full max-w-7xl items-center justify-between px-5 md:px-8">
+      <!-- Logo principal melodia -->
+      <a href="#inicio"
+        class="flex items-center gap-2 text-xl font-bold tracking-tight text-[#F8FAFC] transition-colors hover:text-[#38BDF8] md:text-2xl">
+        <i class="fa-solid fa-music text-lg text-[#38BDF8]" aria-hidden="true"></i>
+
+        <span> Melodia<span class="text-[#38BDF8]">.</span> </span>
+      </a>
+
+      <!-- Nav para PC -->
+      <nav aria-label="Navegação principal" class="hidden items-center gap-6 md:flex lg:gap-8">
+        <a href="#inicio"
+          class="text-sm font-medium text-[#38BDF8] transition-colors duration-200 hover:text-[#60A5FA]">Início</a>
+        <a href="#beneficios"
+          class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Benefícios</a>
+        <a href="#funcionalidades"
+          class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Funcionalidades</a>
+        <a href="#depoimentos"
+          class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Depoimentos</a>
+        <a href="#contato"
+          class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Contato</a>
+      </nav>
+
+      <!-- Botão menu somente para MB -->
+      <button id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"
+        class="inline-flex h-10 w-10 items-center justify-center text-[#F8FAFC] transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] md:hidden">
+        <i id="icone-menu" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Nav para MB -->
+    <div id="menu-mobile"
+      class="absolute inset-x-0 top-full hidden border-t border-[#12304A] bg-[#07111F] px-5 py-4 shadow-xl md:hidden">
+      <nav aria-label="Navegação mobile" class="flex flex-col">
+        <a href="#inicio"
+          class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#F8FAFC] transition-colors duration-200 hover:text-[#38BDF8]">
+          <i class="fa-solid fa-house w-5 text-center text-[#38BDF8]" aria-hidden="true"></i>
+
+          <span>Início</span>
         </a>
 
-        <!-- Nav para PC -->
-        <nav
-          aria-label="Navegação principal"
-          class="hidden items-center gap-6 md:flex lg:gap-8"
-        >
-          <a
-            href="#inicio"
-            class="text-sm font-medium text-[#38BDF8] transition-colors duration-200 hover:text-[#60A5FA]"
-            >Início</a
-          >
-          <a
-            href="#beneficios"
-            class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-            >Benefícios</a
-          >
-          <a
-            href="#funcionalidades"
-            class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-            >Funcionalidades</a
-          >
-          <a
-            href="#depoimentos"
-            class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-            >Depoimentos</a
-          >
-          <a
-            href="#contato"
-            class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-            >Contato</a
-          >
-        </nav>
+        <a href="#beneficios"
+          class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">
+          <i class="fa-solid fa-headphones w-5 text-center text-[#38BDF8]" aria-hidden="true"></i>
 
-        <!-- Botão menu somente para MB -->
-        <button
-          id="botao-menu"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-          class="inline-flex h-10 w-10 items-center justify-center text-[#F8FAFC] transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] md:hidden"
-        >
-          <i
-            id="icone-menu"
-            class="fa-solid fa-bars text-xl"
-            aria-hidden="true"
-          ></i>
-        </button>
-      </div>
+          <span>Benefícios</span>
+        </a>
 
-      <!-- Nav para MB -->
+        <a href="#funcionalidades"
+          class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">
+          <i class="fa-solid fa-list-ul w-5 text-center text-[#38BDF8]" aria-hidden="true"></i>
+
+          <span>Funcionalidades</span>
+        </a>
+
+        <a href="#depoimentos"
+          class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">
+          <i class="fa-solid fa-comments w-5 text-center text-[#38BDF8]" aria-hidden="true"></i>
+
+          <span>Depoimentos</span>
+        </a>
+
+        <a href="#contato"
+          class="link-mobile flex items-center gap-3 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">
+          <i class="fa-solid fa-envelope w-5 text-center text-[#38BDF8]" aria-hidden="true"></i>
+
+          <span>Contato</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteudo principal do site -->
+  <main class="pt-20">
+    <!-- Section INICIO-->
+
+    <section id="inicio" class="scroll-mt-20">
       <div
-        id="menu-mobile"
-        class="absolute inset-x-0 top-full hidden border-t border-[#12304A] bg-[#07111F] px-5 py-4 shadow-xl md:hidden"
-      >
-        <nav aria-label="Navegação mobile" class="flex flex-col">
-          <a
-            href="#inicio"
-            class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#F8FAFC] transition-colors duration-200 hover:text-[#38BDF8]"
-          >
-            <i
-              class="fa-solid fa-house w-5 text-center text-[#38BDF8]"
-              aria-hidden="true"
-            ></i>
+        class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 px-5 py-16 md:px-8 lg:grid-cols-2 lg:gap-20">
+        <!-- Conteúdo textual -->
+        <div class="max-w-2xl">
+          <p
+            class="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+            <i class="fa-solid fa-music" aria-hidden="true"></i>
 
-            <span>Início</span>
-          </a>
+            Música para todos os momentos
+          </p>
 
-          <a
-            href="#beneficios"
-            class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-          >
-            <i
-              class="fa-solid fa-headphones w-5 text-center text-[#38BDF8]"
-              aria-hidden="true"
-            ></i>
+          <h1
+            class="text-4xl font-bold leading-tight tracking-tight text-[#F8FAFC] sm:text-5xl md:text-6xl lg:text-7xl">
+            Sua música.
+            <span class="block text-[#38BDF8]"> Sua forma. </span>
+          </h1>
 
-            <span>Benefícios</span>
-          </a>
+          <p class="mt-6 max-w-xl text-base leading-7 text-[#94A3B8] md:text-lg">
+            Descubra novos sons, crie playlists personalizadas e aproveite
+            cada batida em uma experiência feita para você.
+          </p>
 
-          <a
-            href="#funcionalidades"
-            class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-          >
-            <i
-              class="fa-solid fa-list-ul w-5 text-center text-[#38BDF8]"
-              aria-hidden="true"
-            ></i>
+          <!-- Botões -->
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#funcionalidades"
+              class="inline-flex items-center justify-center gap-3 rounded-md bg-[#38BDF8] px-6 py-3 font-semibold text-[#05070D] transition-colors duration-200 hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
+              <i class="fa-solid fa-play text-sm" aria-hidden="true"></i>
 
-            <span>Funcionalidades</span>
-          </a>
+              <span>Ouvir Agora</span>
+            </a>
 
-          <a
-            href="#depoimentos"
-            class="link-mobile flex items-center gap-3 border-b border-[#12304A]/50 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-          >
-            <i
-              class="fa-solid fa-comments w-5 text-center text-[#38BDF8]"
-              aria-hidden="true"
-            ></i>
+            <a href="#beneficios"
+              class="inline-flex items-center justify-center gap-3 rounded-md border border-[#12304A] px-6 py-3 font-semibold text-[#F8FAFC] transition-colors duration-200 hover:border-[#38BDF8] hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]">
+              <span>Explorar recursos</span>
 
-            <span>Depoimentos</span>
-          </a>
-
-          <a
-            href="#contato"
-            class="link-mobile flex items-center gap-3 py-3 text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]"
-          >
-            <i
-              class="fa-solid fa-envelope w-5 text-center text-[#38BDF8]"
-              aria-hidden="true"
-            ></i>
-
-            <span>Contato</span>
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Conteudo principal do site -->
-    <main class="pt-20">
-      
-        <!-- Section INICIO-->
-
-      <section id="inicio" class="scroll-mt-20">
-        <div
-          class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 px-5 py-16 md:px-8 lg:grid-cols-2 lg:gap-20"
-        >
-          <!-- Conteúdo textual -->
-          <div class="max-w-2xl">
-            <p
-              class="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm"
-            >
-              <i class="fa-solid fa-music" aria-hidden="true"></i>
-
-              Música para todos os momentos
-            </p>
-
-            <h1
-              class="text-4xl font-bold leading-tight tracking-tight text-[#F8FAFC] sm:text-5xl md:text-6xl lg:text-7xl"
-            >
-              Sua música.
-              <span class="block text-[#38BDF8]"> Sua forma. </span>
-            </h1>
-
-            <p
-              class="mt-6 max-w-xl text-base leading-7 text-[#94A3B8] md:text-lg"
-            >
-              Descubra novos sons, crie playlists personalizadas e aproveite
-              cada batida em uma experiência feita para você.
-            </p>
-
-            <!-- Botões -->
-            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#funcionalidades"
-                class="inline-flex items-center justify-center gap-3 rounded-md bg-[#38BDF8] px-6 py-3 font-semibold text-[#05070D] transition-colors duration-200 hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]"
-              >
-                <i class="fa-solid fa-play text-sm" aria-hidden="true"></i>
-
-                <span>Ouvir Agora</span>
-              </a>
-
-              <a
-                href="#beneficios"
-                class="inline-flex items-center justify-center gap-3 rounded-md border border-[#12304A] px-6 py-3 font-semibold text-[#F8FAFC] transition-colors duration-200 hover:border-[#38BDF8] hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
-              >
-                <span>Explorar recursos</span>
-
-                <i
-                  class="fa-solid fa-arrow-right text-sm"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </div>
+              <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+            </a>
           </div>
+        </div>
 
-          <!-- Player musical -->
-          <div class="flex justify-center lg:justify-end">
-            <div
-              class="w-full max-w-md border border-[#12304A] bg-[#07111F] p-5 shadow-2xl shadow-black/30 sm:p-6"
-            >
-              <!-- Informações da música -->
-              <div class="flex items-center gap-4">
-                <!-- Capa provisória -->
-                <div
-                  class="flex h-24 w-24 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#0F4C81] to-[#38BDF8]"
-                >
-                  <i
-                    class="fa-solid fa-music text-3xl text-[#F8FAFC]"
-                    aria-hidden="true"
-                  ></i>
-                </div>
-
-                <div class="min-w-0">
-                  <p
-                    class="text-xs font-medium uppercase tracking-widest text-[#38BDF8]"
-                  >
-                    Tocando agora
-                  </p>
-
-                  <h2
-                    class="mt-2 truncate text-xl font-semibold text-[#F8FAFC]"
-                  >
-                    Boa vibração
-                  </h2>
-
-                  <p class="mt-1 truncate text-sm text-[#94A3B8]">
-                    Melodia Sessions
-                  </p>
-                </div>
+        <!-- Player musical -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="w-full max-w-md border border-[#12304A] bg-[#07111F] p-5 shadow-2xl shadow-black/30 sm:p-6">
+            <!-- Informações da música -->
+            <div class="flex items-center gap-4">
+              <!-- Capa provisória -->
+              <div
+                class="flex h-24 w-24 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#0F4C81] to-[#38BDF8]">
+                <i class="fa-solid fa-music text-3xl text-[#F8FAFC]" aria-hidden="true"></i>
               </div>
 
-              <!-- Barra de progresso -->
-              <div class="mt-7">
-                <div
-                  class="h-1 w-full overflow-hidden rounded-full bg-[#12304A]"
-                >
-                  <div class="h-full w-2/5 rounded-full bg-[#38BDF8]"></div>
-                </div>
+              <div class="min-w-0">
+                <p class="text-xs font-medium uppercase tracking-widest text-[#38BDF8]">
+                  Tocando agora
+                </p>
 
-                <div class="mt-2 flex justify-between text-xs text-[#94A3B8]">
-                  <span>1:24</span>
-                  <span>3:56</span>
-                </div>
+                <h2 class="mt-2 truncate text-xl font-semibold text-[#F8FAFC]">
+                  Boa vibração
+                </h2>
+
+                <p class="mt-1 truncate text-sm text-[#94A3B8]">
+                  Melodia Sessions
+                </p>
+              </div>
+            </div>
+
+            <!-- Barra de progresso -->
+            <div class="mt-7">
+              <div class="h-1 w-full overflow-hidden rounded-full bg-[#12304A]">
+                <div class="h-full w-2/5 rounded-full bg-[#38BDF8]"></div>
               </div>
 
-              <!-- Controles -->
-              <div class="mt-5 flex items-center justify-center gap-6">
-                <button
-                  type="button"
-                  aria-label="Ativar modo aleatório"
-                  class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]"
-                >
-                  <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
-                </button>
-
-                <button
-                  type="button"
-                  aria-label="Música anterior"
-                  class="text-xl text-[#F8FAFC] transition-colors hover:text-[#38BDF8]"
-                >
-                  <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
-                </button>
-
-                <button
-                  type="button"
-                  aria-label="Reproduzir música"
-                  class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#38BDF8] text-xl text-[#05070D] transition-colors hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]"
-                >
-                  <i class="fa-solid fa-play" aria-hidden="true"></i>
-                </button>
-
-                <button
-                  type="button"
-                  aria-label="Próxima música"
-                  class="text-xl text-[#F8FAFC] transition-colors hover:text-[#38BDF8]"
-                >
-                  <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
-                </button>
-
-                <button
-                  type="button"
-                  aria-label="Repetir música"
-                  class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]"
-                >
-                  <i class="fa-solid fa-repeat" aria-hidden="true"></i>
-                </button>
+              <div class="mt-2 flex justify-between text-xs text-[#94A3B8]">
+                <span>1:24</span>
+                <span>3:56</span>
               </div>
+            </div>
+
+            <!-- Controles -->
+            <div class="mt-5 flex items-center justify-center gap-6">
+              <button type="button" aria-label="Ativar modo aleatório"
+                class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+                <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" aria-label="Música anterior"
+                class="text-xl text-[#F8FAFC] transition-colors hover:text-[#38BDF8]">
+                <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" aria-label="Reproduzir música"
+                class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#38BDF8] text-xl text-[#05070D] transition-colors hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
+                <i class="fa-solid fa-play" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" aria-label="Próxima música"
+                class="text-xl text-[#F8FAFC] transition-colors hover:text-[#38BDF8]">
+                <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" aria-label="Repetir música"
+                class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+                <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-        <!-- SECTION parte de beneficios -->
+    <!-- SECTION parte de beneficios -->
 
-      <section id="beneficios" class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]">
+    <section id="beneficios" class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+        <!-- Título da seção -->
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+            Por que escolher o Melodia
+          </p>
 
-        <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
-          <!-- Título da seção -->
-          <div class="max-w-2xl">
-            <p
-              class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm"
-            >
-              Por que escolher o Melodia
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl md:text-5xl">
+            Música do seu jeito
+          </h2>
+
+          <p class="mt-5 text-base leading-7 text-[#94A3B8] md:text-lg">
+            Uma experiência simples para você ouvir, organizar e descobrir
+            músicas todos os dias.
+          </p>
+        </div>
+
+        <!-- Lista de benefícios -->
+        <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Benefício 1 -->
+          <article class="border-l border-[#12304A] pl-6">
+            <i class="fa-solid fa-headphones text-3xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
+              Som de alta qualidade
+            </h3>
+
+            <p class="mt-3 leading-7 text-[#94A3B8]">
+              Ouça cada detalhe das suas músicas com clareza e qualidade.
+            </p>
+          </article>
+
+          <!-- Benefício 2 -->
+          <article class="border-l border-[#12304A] pl-6">
+            <i class="fa-solid fa-list-ul text-3xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
+              Playlists personalizadas
+            </h3>
+
+            <p class="mt-3 leading-7 text-[#94A3B8]">
+              Crie e organize playlists para diferentes momentos do seu dia.
+            </p>
+          </article>
+
+          <!-- Benefício 3 -->
+          <article class="border-l border-[#12304A] pl-6">
+            <i class="fa-solid fa-compass text-3xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
+              Descubra novos artistas
+            </h3>
+
+            <p class="mt-3 leading-7 text-[#94A3B8]">
+              Encontre músicas e artistas que combinam com o seu estilo.
+            </p>
+          </article>
+
+          <!-- Benefício 4 -->
+          <article class="border-l border-[#12304A] pl-6">
+            <i class="fa-solid fa-mobile-screen-button text-3xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
+              Interface intuitiva
+            </h3>
+
+            <p class="mt-3 leading-7 text-[#94A3B8]">
+              Navegue facilmente por uma interface simples e organizada.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funcionalidades" class="scroll-mt-20 bg-[#05070D]">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 md:px-8 md:py-24 lg:grid-cols-2 lg:gap-20">
+        <!-- Descrição das funcionalidades -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+            Funcionalidades
+          </p>
+
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl md:text-5xl">
+            Feito para o seu ritmo
+          </h2>
+
+          <p class="mt-5 max-w-xl text-base leading-7 text-[#94A3B8] md:text-lg">
+            Organize suas músicas, descubra novos artistas e crie uma
+            experiência que combina com você.
+          </p>
+
+          <!-- Lista de funcionalidades -->
+          <div class="mt-10 space-y-8">
+            <!-- Funcionalidade 1 -->
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[#071A33] text-[#38BDF8]">
+                <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-[#F8FAFC]">
+                  Crie suas playlists
+                </h3>
+
+                <p class="mt-2 leading-7 text-[#94A3B8]">
+                  Organize suas músicas favoritas para cada momento do dia.
+                </p>
+              </div>
+            </div>
+
+            <!-- Funcionalidade 2 -->
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[#071A33] text-[#38BDF8]">
+                <i class="fa-solid fa-compass" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-[#F8FAFC]">
+                  Explore novos sons
+                </h3>
+
+                <p class="mt-2 leading-7 text-[#94A3B8]">
+                  Receba sugestões de músicas e artistas baseadas no seu
+                  estilo.
+                </p>
+              </div>
+            </div>
+
+            <!-- Funcionalidade 3 -->
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[#071A33] text-[#38BDF8]">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-[#F8FAFC]">
+                  Salve seus favoritos
+                </h3>
+
+                <p class="mt-2 leading-7 text-[#94A3B8]">
+                  Encontre rapidamente as músicas que você mais gosta.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contato"
+            class="mt-10 inline-flex items-center gap-3 font-semibold text-[#38BDF8] transition-colors hover:text-[#60A5FA]">
+            <span>Comece a descobrir</span>
+
+            <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Representação da biblioteca musical -->
+        <div class="border border-[#12304A] bg-[#07111F] p-5 shadow-2xl shadow-black/30 sm:p-7">
+          <!-- Cabeçalho da biblioteca -->
+          <div class="flex items-center justify-between border-b border-[#12304A] pb-5">
+            <div>
+              <p class="text-sm text-[#38BDF8]">Melodia</p>
+
+              <h3 class="mt-1 text-xl font-semibold text-[#F8FAFC]">
+                Sua biblioteca
+              </h3>
+            </div>
+
+            <button type="button" aria-label="Adicionar música"
+              class="flex h-10 w-10 items-center justify-center rounded-md border border-[#12304A] text-[#38BDF8] transition-colors hover:border-[#38BDF8] hover:bg-[#071A33]">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Música em destaque -->
+          <div class="mt-6 flex items-center gap-4">
+            <div
+              class="flex h-20 w-20 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#0F4C81] to-[#38BDF8]">
+              <i class="fa-solid fa-music text-2xl text-[#F8FAFC]" aria-hidden="true"></i>
+            </div>
+
+            <div class="min-w-0 flex-1">
+              <p class="truncate text-lg font-semibold text-[#F8FAFC]">
+                Boa vibração
+              </p>
+
+              <p class="mt-1 truncate text-sm text-[#94A3B8]">
+                Playlist para melhorar o seu dia
+              </p>
+            </div>
+
+            <button type="button" aria-label="Reproduzir playlist"
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#38BDF8] text-[#05070D] transition-colors hover:bg-[#60A5FA]">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Lista de músicas -->
+          <ol class="mt-7 divide-y divide-[#12304A]">
+            <li class="flex items-center gap-4 py-4">
+              <span class="w-5 text-sm text-[#94A3B8]"> 1 </span>
+
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-medium text-[#F8FAFC]">Céu aberto</p>
+
+                <p class="mt-1 truncate text-sm text-[#94A3B8]">Aurora</p>
+              </div>
+
+              <span class="text-sm text-[#94A3B8]"> 3:24 </span>
+            </li>
+
+            <li class="flex items-center gap-4 py-4">
+              <span class="w-5 text-sm text-[#94A3B8]"> 2 </span>
+
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-medium text-[#F8FAFC]">Movimento</p>
+
+                <p class="mt-1 truncate text-sm text-[#94A3B8]">
+                  Horizonte Azul
+                </p>
+              </div>
+
+              <span class="text-sm text-[#94A3B8]"> 2:56 </span>
+            </li>
+
+            <li class="flex items-center gap-4 py-4">
+              <span class="w-5 text-sm text-[#94A3B8]"> 3 </span>
+
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-medium text-[#F8FAFC]">
+                  Novos planos
+                </p>
+
+                <p class="mt-1 truncate text-sm text-[#94A3B8]">
+                  Linha do Tempo
+                </p>
+              </div>
+
+              <span class="text-sm text-[#94A3B8]"> 3:41 </span>
+            </li>
+
+            <li class="flex items-center gap-4 py-4">
+              <span class="w-5 text-sm text-[#94A3B8]"> 4 </span>
+
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-medium text-[#F8FAFC]">Lua cheia</p>
+
+                <p class="mt-1 truncate text-sm text-[#94A3B8]">
+                  Maré Noturna
+                </p>
+              </div>
+
+              <span class="text-sm text-[#94A3B8]"> 4:02 </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+        <!-- Título -->
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+            Depoimentos
+          </p>
+
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl md:text-5xl">
+            O que os ouvintes dizem
+          </h2>
+
+          <p class="mt-5 text-base leading-7 text-[#94A3B8] md:text-lg">
+            Pessoas que transformaram seus momentos com música.
+          </p>
+        </div>
+
+        <!-- Lista de depoimentos -->
+        <div class="mt-14 grid gap-10 md:grid-cols-3">
+          <!-- Depoimento 1 -->
+          <article class="border-t border-[#12304A] pt-8">
+            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+              “O Melodia transformou meus dias. As playlists são incríveis e
+              sempre encontro músicas novas.”
+            </blockquote>
+
+            <div class="mt-8 flex items-center gap-4">
+              <img src="./assets/images/depoimento-1.jpg" alt="Foto de Camila Souza"
+                class="h-12 w-12 rounded-full object-cover" />
+
+              <div>
+                <p class="font-semibold text-[#F8FAFC]">Camila Souza</p>
+
+                <p class="mt-1 text-sm text-[#94A3B8]">Estudante</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 2 -->
+          <article class="border-t border-[#12304A] pt-8">
+            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+              “A interface é simples e intuitiva. É exatamente o que eu
+              precisava para manter minhas músicas organizadas.”
+            </blockquote>
+
+            <div class="mt-8 flex items-center gap-4">
+              <img src="./assets/images/depoimento-2.jpg" alt="Foto de Rafael Lima"
+                class="h-12 w-12 rounded-full object-cover" />
+
+              <div>
+                <p class="font-semibold text-[#F8FAFC]">Rafael Lima</p>
+
+                <p class="mt-1 text-sm text-[#94A3B8]">Designer</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 3 -->
+          <article class="border-t border-[#12304A] pt-8">
+            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+
+            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+              “Descobri artistas incríveis pelo Melodia. A experiência é leve,
+              bonita e muito fácil de usar.”
+            </blockquote>
+
+            <div class="mt-8 flex items-center gap-4">
+              <img src="./assets/images/depoimento-3.jpg" alt="Foto de Juliana Martins"
+                class="h-12 w-12 rounded-full object-cover" />
+
+              <div>
+                <p class="font-semibold text-[#F8FAFC]">Juliana Martins</p>
+
+                <p class="mt-1 text-sm text-[#94A3B8]">Professora</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="scroll-mt-20 bg-[#05070D]">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+        <div class="border border-[#12304A] bg-[#07111F] px-6 py-14 sm:px-10 md:py-20">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+              Fique por dentro
             </p>
 
-            <h2
-              class="mt-4 text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl md:text-5xl"
-            >
-              Música do seu jeito
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-[#F8FAFC] sm:text-4xl md:text-5xl">
+              Receba novidades do Melodia
             </h2>
 
-            <p class="mt-5 text-base leading-7 text-[#94A3B8] md:text-lg">
-              Uma experiência simples para você ouvir, organizar e descobrir
-              músicas todos os dias.
+            <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#94A3B8] md:text-lg">
+              Receba lançamentos, playlists especiais e novidades diretamente
+              no seu e-mail.
             </p>
-          </div>
 
-          <!-- Lista de benefícios -->
-          <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            <!-- Benefício 1 -->
-            <article class="border-l border-[#12304A] pl-6">
-              <i
-                class="fa-solid fa-headphones text-3xl text-[#38BDF8]"
-                aria-hidden="true"
-              ></i>
+            <!-- Formulário -->
+            <form id="formulario-contato" class="mx-auto mt-10 flex max-w-2xl flex-col gap-3 sm:flex-row">
+              <label for="email" class="sr-only"> Seu melhor e-mail </label>
 
-              <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
-                Som de alta qualidade
-              </h3>
+              <div class="relative flex-1">
+                <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-[#38BDF8]"
+                  aria-hidden="true"></i>
 
-              <p class="mt-3 leading-7 text-[#94A3B8]">
-                Ouça cada detalhe das suas músicas com clareza e qualidade.
-              </p>
-            </article>
+                <input id="email" name="email" type="email" required autocomplete="email"
+                  placeholder="Seu melhor e-mail"
+                  class="h-12 w-full rounded-md border border-[#12304A] bg-[#05070D] pl-12 pr-4 text-[#F8FAFC] outline-none transition-colors placeholder:text-[#94A3B8] focus:border-[#38BDF8] focus:ring-1 focus:ring-[#38BDF8]" />
+              </div>
 
-            <!-- Benefício 2 -->
-            <article class="border-l border-[#12304A] pl-6">
-              <i
-                class="fa-solid fa-list-ul text-3xl text-[#38BDF8]"
-                aria-hidden="true"
-              ></i>
+              <button type="submit"
+                class="inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[#38BDF8] px-6 font-semibold text-[#05070D] transition-colors duration-200 hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
+                <span>Quero conhecer</span>
 
-              <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
-                Playlists personalizadas
-              </h3>
-
-              <p class="mt-3 leading-7 text-[#94A3B8]">
-                Crie e organize playlists para diferentes momentos do seu dia.
-              </p>
-            </article>
-
-            <!-- Benefício 3 -->
-            <article class="border-l border-[#12304A] pl-6">
-              <i
-                class="fa-solid fa-compass text-3xl text-[#38BDF8]"
-                aria-hidden="true"
-              ></i>
-
-              <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
-                Descubra novos artistas
-              </h3>
-
-              <p class="mt-3 leading-7 text-[#94A3B8]">
-                Encontre músicas e artistas que combinam com o seu estilo.
-              </p>
-            </article>
-
-            <!-- Benefício 4 -->
-            <article class="border-l border-[#12304A] pl-6">
-              <i
-                class="fa-solid fa-mobile-screen-button text-3xl text-[#38BDF8]"
-                aria-hidden="true"
-              ></i>
-
-              <h3 class="mt-6 text-xl font-semibold text-[#F8FAFC]">
-                Interface intuitiva
-              </h3>
-
-              <p class="mt-3 leading-7 text-[#94A3B8]">
-                Navegue facilmente por uma interface simples e organizada.
-              </p>
-            </article>
+                <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+              </button>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section
-        id="funcionalidades"
-        class="min-h-screen px-5 py-20 md:px-8"
-      ></section>
+  <footer class="border-t border-[#12304A] bg-[#05070D]">
+    <div class="mx-auto max-w-7xl px-5 py-12 md:px-8">
+      <!-- Parte principal do rodapé -->
+      <div class="grid gap-10 md:grid-cols-3 md:items-start">
+        <!-- Logo e descrição -->
+        <div>
+          <a href="#inicio"
+            class="flex items-center gap-2 text-xl font-bold text-[#F8FAFC] transition-colors hover:text-[#38BDF8]">
+            <i class="fa-solid fa-music text-[#38BDF8]" aria-hidden="true"></i>
 
-      <section
-        id="depoimentos"
-        class="min-h-screen px-5 py-20 md:px-8"
-      ></section>
+            <span> Melodia<span class="text-[#38BDF8]">.</span> </span>
+          </a>
 
-      <section id="contato" class="min-h-screen px-5 py-20 md:px-8"></section>
-    </main>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-[#94A3B8]">
+            Sua música, suas playlists e novas descobertas em um só lugar.
+          </p>
+        </div>
 
-    <script src="/scripts/main.js"></script>
-  </body>
+        <!-- Links -->
+        <nav aria-label="Navegação do rodapé" class="flex flex-col gap-3 text-sm md:items-center">
+          <a href="#inicio" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            Início
+          </a>
+
+          <a href="#beneficios" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            Benefícios
+          </a>
+
+          <a href="#funcionalidades" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            Funcionalidades
+          </a>
+
+          <a href="#depoimentos" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            Depoimentos
+          </a>
+
+          <a href="#contato" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            Contato
+          </a>
+        </nav>
+
+        <!-- Redes sociais -->
+        <div class="md:text-right">
+          <p class="text-sm font-semibold text-[#F8FAFC]">Siga o Melodia</p>
+
+          <div class="mt-4 flex items-center gap-5 md:justify-end">
+            <a href="#" aria-label="Instagram" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+
+            <a href="#" aria-label="GitHub" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+
+            <a href="mailto:contato@melodia.com" aria-label="Enviar e-mail"
+              class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte inferior -->
+      <div
+        class="mt-10 flex flex-col gap-4 border-t border-[#12304A] pt-6 text-sm text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Melodia. Todos os direitos reservados.</p>
+
+        <a href="#" class="transition-colors hover:text-[#38BDF8]">
+          Política de privacidade
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+
 </html>
