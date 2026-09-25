@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="./styles/global.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" />
+  <link rel="stylesheet" href="./styles/global.css?v=2" />
   <link rel="icon" href="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png">
 
   <title>Melodia</title>
@@ -105,24 +106,24 @@
         class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 md:px-8 md:py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.75fr)] lg:gap-20">
         <!-- Conteúdo textual -->
         <div class="max-w-2xl text-left">
-          <p class="mb-6 flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
+          <p data-reveal data-delay="0" class="mb-6 flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
             <span class="h-px w-8 bg-[#38BDF8]" aria-hidden="true"></span>
             Música para todos os momentos
           </p>
 
-          <h1
+          <h1 data-reveal data-delay="90"
             class="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight text-[#F8FAFC] sm:text-5xl md:text-6xl lg:text-7xl">
             Você no comando
             <span class="block text-[#38BDF8]"> do som</span>
           </h1>
 
-          <p class="mt-6 max-w-xl text-base leading-7 text-[#CBD5E1] md:text-lg">
+          <p data-reveal data-delay="180" class="mt-6 max-w-xl text-base leading-7 text-[#CBD5E1] md:text-lg">
             Descubra novos sons, crie playlists personalizadas e aproveite
             cada batida em uma experiência feita para você.
           </p>
 
           <!-- Botões -->
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div data-reveal data-delay="270" class="mt-8 flex flex-col gap-4 sm:flex-row">
             <a id="botao-ouvir" href="#inicio"
               class="inline-flex items-center justify-center gap-3 rounded-md bg-[#38BDF8] px-7 py-3 font-semibold text-[#05070D] transition-colors duration-200 hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
               <i class="fa-solid fa-play text-sm" aria-hidden="true"></i>
@@ -140,7 +141,7 @@
         </div>
 
         <!-- Player musical -->
-        <div class="relative flex w-full justify-center lg:justify-end">
+        <div data-reveal="right" data-delay="180" class="relative flex w-full justify-center lg:justify-end">
           <div class="relative w-full max-w-md">
             <div class="absolute -inset-3 hidden border border-[#38BDF8]/10 sm:block" aria-hidden="true"></div>
             <div
@@ -233,7 +234,7 @@
     <section id="beneficios" class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]/80 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <!-- Título da seção -->
-        <div class="mx-auto max-w-3xl text-center">
+        <div data-reveal class="mx-auto max-w-3xl text-center">
           <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
             Por que escolher o Melodia
           </p>
@@ -251,7 +252,7 @@
         <!-- Lista de benefícios -->
         <div class="mt-14 grid gap-4 md:grid-cols-12">
           <!-- Benefício 1 -->
-          <article class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
+          <article data-reveal class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
             <div class="absolute left-0 top-0 h-px w-24 bg-[#38BDF8]"></div>
             <i class="fa-solid fa-headphones absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
             <div class="relative flex items-center justify-between">
@@ -269,7 +270,7 @@
           </article>
 
           <!-- Benefício 2 -->
-          <article class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
+          <article data-reveal data-delay="80" class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
             <div class="absolute left-0 top-0 h-px w-16 bg-[#38BDF8]/70"></div>
             <i class="fa-solid fa-list-ul absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
             <div class="relative flex items-center justify-between">
@@ -287,7 +288,7 @@
           </article>
 
           <!-- Benefício 3 -->
-          <article class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
+          <article data-reveal data-delay="160" class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
             <div class="absolute bottom-0 right-0 h-px w-16 bg-[#38BDF8]/70"></div>
             <i class="fa-solid fa-compass absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
             <div class="relative flex items-center justify-between">
@@ -305,7 +306,7 @@
           </article>
 
           <!-- Benefício 4 -->
-          <article class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
+          <article data-reveal data-delay="240" class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
             <div class="absolute bottom-0 right-0 h-px w-24 bg-[#38BDF8]"></div>
             <i class="fa-solid fa-mobile-screen-button absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
             <div class="relative flex items-center justify-between">
@@ -328,7 +329,7 @@
     <section id="funcionalidades" class="scroll-mt-20 bg-[#05070D]/65 backdrop-blur-sm">
       <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 md:px-8 md:py-24 lg:grid-cols-2 lg:gap-20">
         <!-- Descrição das funcionalidades -->
-        <div>
+        <div data-reveal>
           <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
             Funcionalidades
           </p>
@@ -406,7 +407,7 @@
         </div>
 
         <!-- Representação da biblioteca musical -->
-        <div
+        <div data-reveal="right" data-delay="120"
           class="rounded-2xl border border-white/10 bg-[#07111F]/80 p-5 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-7">
           <!-- Cabeçalho da biblioteca -->
           <div class="flex items-center justify-between border-b border-[#12304A] pb-5">
@@ -513,7 +514,7 @@
       class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]/80 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <!-- Título -->
-        <div class="max-w-2xl">
+        <div data-reveal class="max-w-2xl">
           <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
             Depoimentos
           </p>
@@ -530,7 +531,7 @@
         <!-- Lista de depoimentos -->
         <div class="mt-14 grid gap-10 md:grid-cols-3">
           <!-- Depoimento 1 -->
-          <article class="border-t border-[#12304A] pt-8">
+          <article data-reveal class="border-t border-[#12304A] pt-8">
             <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
 
             <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
@@ -551,7 +552,7 @@
           </article>
 
           <!-- Depoimento 2 -->
-          <article class="border-t border-[#12304A] pt-8">
+          <article data-reveal data-delay="100" class="border-t border-[#12304A] pt-8">
             <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
 
             <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
@@ -572,7 +573,7 @@
           </article>
 
           <!-- Depoimento 3 -->
-          <article class="border-t border-[#12304A] pt-8">
+          <article data-reveal data-delay="200" class="border-t border-[#12304A] pt-8">
             <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
 
             <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
@@ -604,7 +605,7 @@
 
           <div class="relative grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
             <!-- Texto da seção -->
-            <div class="text-center lg:text-left">
+            <div data-reveal class="text-center lg:text-left">
               <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
                 Fique por dentro
               </p>
@@ -625,7 +626,7 @@
             </div>
 
             <!-- Formulário -->
-            <form id="formulario-contato"
+            <form id="formulario-contato" data-reveal="right" data-delay="120"
               class="grid gap-4 rounded-2xl border border-white/10 bg-[#05070D]/55 p-5 backdrop-blur-md sm:grid-cols-2 sm:p-6">
               <div>
                 <label for="nome" class="mb-2 block text-sm font-medium text-[#CBD5E1]">Nome</label>
@@ -768,7 +769,9 @@
     </div>
   </footer>
 
-  <script src="./scripts/main.js"></script>
+  <script src="./scripts/menuMobile.js"></script>
+  <script src="./scripts/animacao.js"></script>
+  <script src="./scripts/musica.js"></script>
 </body>
 
 </html>
