@@ -7,8 +7,11 @@
   <script>document.documentElement.classList.add("js");</script>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" />
-  <link rel="stylesheet" href="./styles/global.css?v=3" />
+  <link rel="stylesheet" href="./styles/global.css?v=6" />
   <link rel="icon" href="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png">
 
   <title>Melodia</title>
@@ -30,14 +33,14 @@
       <a href="#inicio" aria-label="Ir para o início" class="block">
         <span class="relative block h-9 w-44 overflow-hidden md:h-10 md:w-48">
           <img src="./assets/20ce6e6f-7b97-492e-bb13-f94bdc7a1ed9-removebg-preview.png" alt="Melodia"
-            class="absolute left-1/2 top-1/2 h-40 max-w-none -translate-x-1/2 -translate-y-1/2 md:h-41" />
+            class="absolute left-1/2 top-1/2 h-40 max-w-none -translate-x-1/2 -translate-y-1/2" />
         </span>
       </a>
 
       <!-- Nav para PC -->
       <nav aria-label="Navegação principal" class="hidden items-center gap-6 md:flex lg:gap-8">
         <a href="#inicio"
-          class="text-sm font-medium text-[#38BDF8] transition-colors duration-200 hover:text-[#60A5FA]">Início</a>
+          class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8] active:text-[#38BDF8]">Início</a>
         <a href="#beneficios"
           class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Benefícios</a>
         <a href="#funcionalidades"
@@ -106,15 +109,10 @@
         class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 md:px-8 md:py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.75fr)] lg:gap-20 lg:py-14">
         <!-- Conteúdo textual -->
         <div class="max-w-2xl text-left">
-          <p data-reveal data-delay="0" class="mb-6 flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
-            <span class="h-px w-8 bg-[#38BDF8]" aria-hidden="true"></span>
-            Música para todos os momentos
-          </p>
-
           <h1 data-reveal data-delay="90"
-            class="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight text-[#F8FAFC] sm:text-5xl md:text-6xl lg:text-7xl">
-            Você no comando
-            <span class="block text-[#38BDF8]"> do som</span>
+            class="fonte-titulo w-fit max-w-xl text-4xl font-medium leading-[1.05] tracking-tight text-[#F8FAFC] sm:text-5xl md:text-6xl lg:text-7xl">
+            <span class="block">Você no comando</span>
+            <span class="block text-center text-[#38BDF8]">do som</span>
           </h1>
 
           <p data-reveal data-delay="180" class="mt-6 max-w-xl text-base leading-7 text-[#CBD5E1] md:text-lg">
@@ -293,11 +291,11 @@
             </div>
 
             <h3 class="relative mt-12 text-2xl font-semibold text-[#F8FAFC]">
-              Som de alta qualidade
+              Cada detalhe importa
             </h3>
 
             <p class="relative mt-3 max-w-md leading-7 text-[#94A3B8]">
-              Ouça cada detalhe das suas músicas com clareza e qualidade.
+              Perceba vozes, graves e instrumentos com uma reprodução clara e envolvente.
             </p>
           </article>
 
@@ -311,11 +309,11 @@
             </div>
 
             <h3 class="relative mt-12 text-2xl font-semibold text-[#F8FAFC]">
-              Playlists personalizadas
+              Uma trilha para cada momento
             </h3>
 
             <p class="relative mt-3 max-w-md leading-7 text-[#94A3B8]">
-              Crie e organize playlists para diferentes momentos do seu dia.
+              Organize músicas para estudar, treinar, relaxar ou transformar o seu dia.
             </p>
           </article>
 
@@ -329,11 +327,11 @@
             </div>
 
             <h3 class="relative mt-12 text-2xl font-semibold text-[#F8FAFC]">
-              Descubra novos artistas
+              Descobertas além do óbvio
             </h3>
 
             <p class="relative mt-3 max-w-md leading-7 text-[#94A3B8]">
-              Encontre músicas e artistas que combinam com o seu estilo.
+              Saia do repetido e encontre artistas e estilos alinhados ao seu gosto.
             </p>
           </article>
 
@@ -347,11 +345,11 @@
             </div>
 
             <h3 class="relative mt-12 text-2xl font-semibold text-[#F8FAFC]">
-              Interface intuitiva
+              Menos cliques, mais música
             </h3>
 
             <p class="relative mt-3 max-w-md leading-7 text-[#94A3B8]">
-              Navegue facilmente por uma interface simples e organizada.
+              Encontre, organize e reproduza suas músicas de forma rápida e descomplicada.
             </p>
           </article>
         </div>
@@ -472,8 +470,8 @@
                 <span class="melodia-fila__play" aria-hidden="true"></span>
                 <div class="melodia-fila__capa"><span>02</span></div>
                 <div class="melodia-fila__musica">
-                  <strong>Céu aberto</strong>
-                  <span>Aurora</span>
+                  <strong>Céu azul</strong>
+                  <span>Charlie Brown Jr</span>
                 </div>
                 <span class="melodia-fila__tempo">3:24</span>
               </li>
@@ -482,8 +480,8 @@
                 <span class="melodia-fila__play" aria-hidden="true"></span>
                 <div class="melodia-fila__capa"><span>03</span></div>
                 <div class="melodia-fila__musica">
-                  <strong>Movimento</strong>
-                  <span>Horizonte Azul</span>
+                  <strong>Sorri, Sou Rei</strong>
+                  <span>Natiruts</span>
                 </div>
                 <span class="melodia-fila__tempo">2:56</span>
               </li>
@@ -492,8 +490,8 @@
                 <span class="melodia-fila__play" aria-hidden="true"></span>
                 <div class="melodia-fila__capa"><span>04</span></div>
                 <div class="melodia-fila__musica">
-                  <strong>Lua cheia</strong>
-                  <span>Maré Noturna</span>
+                  <strong>Como Tudo Deve Ser</strong>
+                  <span>Charlie Brown Jr</span>
                 </div>
                 <span class="melodia-fila__tempo">4:02</span>
               </li>
@@ -700,7 +698,7 @@
   <footer class="relative z-10 border-t border-[#12304A] bg-[#05070D]/85 backdrop-blur-md">
     <div class="mx-auto max-w-7xl px-5 py-12 md:px-8">
       <!-- Parte principal do rodapé -->
-      <div class="grid gap-10 md:grid-cols-3 md:items-start">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <!-- Logo e descrição -->
         <div>
           <a href="#inicio" aria-label="Voltar ao início" class="block w-fit">
@@ -715,57 +713,44 @@
           </p>
         </div>
 
-        <!-- Links -->
-        <nav aria-label="Navegação do rodapé" class="flex flex-col gap-3 text-sm md:items-center">
-          <a href="#inicio" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
-            Início
-          </a>
-
-          <a href="#beneficios" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
-            Benefícios
-          </a>
-
-          <a href="#funcionalidades" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
-            Funcionalidades
-          </a>
-
-          <a href="#depoimentos" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
-            Depoimentos
-          </a>
-
-          <a href="#contato" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
-            Contato
-          </a>
-        </nav>
-
         <!-- Redes sociais -->
         <div class="md:text-right">
           <p class="text-sm font-semibold text-[#F8FAFC]">Siga o Melodia</p>
 
-          <div class="mt-4 flex items-center gap-5 md:justify-end">
-            <a href="#" aria-label="Instagram" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+          <div class="mt-4 flex items-center gap-3 md:justify-end">
+            <a href="#" aria-label="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-lg text-[#94A3B8] transition-colors hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 hover:text-[#38BDF8]">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>
 
-            <a href="#" aria-label="YouTube" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            <a href="#" aria-label="YouTube" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-lg text-[#94A3B8] transition-colors hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 hover:text-[#38BDF8]">
               <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             </a>
 
-            <a href="#" aria-label="GitHub" class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+            <a href="#" aria-label="GitHub" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-lg text-[#94A3B8] transition-colors hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 hover:text-[#38BDF8]">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
             </a>
 
             <a href="mailto:contato@melodia.com" aria-label="Enviar e-mail"
-              class="text-xl text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-lg text-[#94A3B8] transition-colors hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 hover:text-[#38BDF8]">
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
 
+      <!-- Navegação horizontal -->
+      <nav aria-label="Navegação do rodapé"
+        class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-y border-[#12304A] py-5 text-sm font-medium">
+        <a href="#inicio" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Início</a>
+        <a href="#beneficios" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Benefícios</a>
+        <a href="#funcionalidades" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Funcionalidades</a>
+        <a href="#depoimentos" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Depoimentos</a>
+        <a href="#contato" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Contato</a>
+      </nav>
+
       <!-- Parte inferior -->
       <div
-        class="mt-10 flex flex-col gap-4 border-t border-[#12304A] pt-6 text-sm text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
+        class="mt-6 flex flex-col gap-4 text-sm text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Melodia. Todos os direitos reservados.</p>
 
         <a href="#" class="transition-colors hover:text-[#38BDF8]">

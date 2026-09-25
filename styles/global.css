@@ -1,4 +1,8 @@
 
+.fonte-titulo {
+  font-family: "Playfair Display", serif;
+}
+
 /* ANIMACAO ENTRADA SITE */
 
 html.js [data-reveal] {
