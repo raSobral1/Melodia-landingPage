@@ -1,4 +1,6 @@
 
+// MENU PARA VERSAO MOBILE
+
 const botaoMenu = document.querySelector("#botao-menu");
 const menuMobile = document.querySelector("#menu-mobile");
 const iconeMenu = document.querySelector("#icone-menu");

@@ -3,7 +3,7 @@
   font-family: "Playfair Display", serif;
 }
 
-/* ANIMACAO ENTRADA SITE */
+/* ANIMACAO ENTRADA SITE E ROLAGEM */
 
 html.js [data-reveal] {
   opacity: 0;
@@ -30,7 +30,8 @@ html.js [data-reveal].is-visible {
   }
 }
 
-/* INÍCIO: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 — ADAPTADO PARA O MELODIA */
+/* TEMPLATE IMPORTADO DO UIVERSE.IO, PARA FUNCAO DE FUNCIONALIDADES */
+
 .melodia-fila {
   position: relative;
   isolation: isolate;
@@ -250,4 +251,4 @@ html.js [data-reveal].is-visible {
   .melodia-fila__item,
   .melodia-fila__play { transition: none; }
 }
-/* FIM: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 */
+

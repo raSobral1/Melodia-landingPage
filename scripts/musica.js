@@ -1,3 +1,6 @@
+
+// SCRIPT PARA A MUSICA TOCAR E INTERAGIR COM OS ICONES
+
 const audio = document.querySelector("#audio-player");
 const botaoOuvir = document.querySelector("#botao-ouvir");
 const botaoPlay = document.querySelector("#botao-play");

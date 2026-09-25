@@ -18,7 +18,9 @@
 </head>
 
 <body class="relative isolate m-0 min-h-screen overflow-x-hidden bg-[#05070D] text-[#F8FAFC]">
-  <!-- Vídeo usado como fundo de toda a página -->
+  
+  <!-- VIDEO DE BG PARA A PAGE TODA -->
+
   <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
     <video autoplay muted loop playsinline preload="metadata" class="h-full w-full object-cover">
       <source src="./assets/Music_website_hero_animation_1080p_20260924220140.mp4.mp4" type="video/mp4" />
@@ -38,6 +40,7 @@
       </a>
 
       <!-- Nav para PC -->
+
       <nav aria-label="Navegação principal" class="hidden items-center gap-6 md:flex lg:gap-8">
         <a href="#inicio"
           class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8] active:text-[#38BDF8]">Início</a>
@@ -51,14 +54,16 @@
           class="text-sm font-medium text-[#94A3B8] transition-colors duration-200 hover:text-[#38BDF8]">Contato</a>
       </nav>
 
-      <!-- Botão menu somente para MB -->
+      <!-- Botão menu somente para MOBILE -->
+
       <button id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"
         class="inline-flex h-10 w-10 items-center justify-center text-[#F8FAFC] transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] md:hidden">
         <i id="icone-menu" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
       </button>
     </div>
 
-    <!-- Nav para MB -->
+    <!-- Nav para MOBILE -->
+
     <div id="menu-mobile"
       class="absolute inset-x-0 top-full hidden border-t border-[#12304A] bg-[#07111F] px-5 py-4 shadow-xl md:hidden">
       <nav aria-label="Navegação mobile" class="flex flex-col">
@@ -100,8 +105,10 @@
     </div>
   </header>
 
-  <!-- Conteudo principal do site -->
+  <!-- Inicio conteudo site -->
+
   <main class="relative z-10 pt-20">
+    
     <!-- Section INICIO-->
 
     <section id="inicio" class="scroll-mt-20">
@@ -138,7 +145,8 @@
           </div>
         </div>
 
-        <!-- Player musical -->
+        <!-- Player musical com icones e musica-->
+
         <div data-reveal="right" data-delay="180" class="relative flex w-full justify-center lg:justify-end">
           <div class="w-full max-w-sm space-y-5">
             <div class="relative">
@@ -154,9 +162,12 @@
               <i class="fa-solid fa-wave-square text-sm text-[#38BDF8]" aria-hidden="true"></i>
             </div>
 
-            <!-- Informações da música -->
+            <!-- Informaçoes da musica -->
+
             <div class="flex items-center gap-4">
-              <!-- Ícone do Melodia -->
+             
+              <!-- Icone do Melodia -->
+
               <div class="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-[#38BDF8]/30 bg-[#05070D]">
                 <img src="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png"
                   alt="Ícone do Melodia" class="absolute left-1/2 top-1/2 h-[122%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover" />
@@ -178,6 +189,7 @@
             </div>
 
             <!-- Barra de progresso -->
+
             <div class="mt-5">
               <label for="progresso-musica" class="sr-only">Progresso da música</label>
               <input id="progresso-musica" type="range" min="0" max="100" value="0" step="0.1"
@@ -190,6 +202,7 @@
             </div>
 
             <!-- Controles -->
+
             <div class="mt-4 flex items-center justify-center gap-5">
               <button id="botao-mudo" type="button" aria-label="Desativar som" aria-pressed="false"
                 class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
@@ -225,7 +238,8 @@
               </div>
             </div>
 
-            <!-- Template adaptado de Uiverse.io por Itskrish01 -->
+            <!-- Template IMPORTADO Uiverse.io para pagina de inicio -->
+
             <article
               class="group relative overflow-hidden rounded-2xl border border-[#38BDF8]/20 bg-gradient-to-br from-[#07111F]/95 to-[#05070D]/95 p-5 text-center shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#38BDF8]/50 hover:shadow-[#38BDF8]/10">
               <div class="absolute inset-0 bg-gradient-to-tr from-[#38BDF8]/5 via-transparent to-[#2563EB]/10 opacity-50 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true"></div>
@@ -279,9 +293,12 @@
           </p>
         </div>
 
-        <!-- Lista de benefícios -->
+        <!-- Lista de beneficios -->
+
         <div class="mt-14 grid gap-4 md:grid-cols-12">
-          <!-- Benefício 1 -->
+          
+          <!-- primeiro Beneficio -->
+
           <article data-reveal class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
             <div class="absolute left-0 top-0 h-px w-24 bg-[#38BDF8]"></div>
             <i class="fa-solid fa-headphones absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
@@ -299,7 +316,7 @@
             </p>
           </article>
 
-          <!-- Benefício 2 -->
+          <!-- segundo Beneficio -->
           <article data-reveal data-delay="80" class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
             <div class="absolute left-0 top-0 h-px w-16 bg-[#38BDF8]/70"></div>
             <i class="fa-solid fa-list-ul absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
@@ -317,7 +334,7 @@
             </p>
           </article>
 
-          <!-- Benefício 3 -->
+          <!-- terceiro Beneficio -->
           <article data-reveal data-delay="160" class="group relative overflow-hidden border border-white/10 bg-[#07111F]/70 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-5 md:p-8">
             <div class="absolute bottom-0 right-0 h-px w-16 bg-[#38BDF8]/70"></div>
             <i class="fa-solid fa-compass absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
@@ -335,7 +352,7 @@
             </p>
           </article>
 
-          <!-- Benefício 4 -->
+          <!-- quarto Beneficio -->
           <article data-reveal data-delay="240" class="group relative overflow-hidden border border-white/10 bg-[#05070D]/55 p-7 transition-colors duration-300 hover:border-[#38BDF8]/60 md:col-span-7 md:p-8">
             <div class="absolute bottom-0 right-0 h-px w-24 bg-[#38BDF8]"></div>
             <i class="fa-solid fa-mobile-screen-button absolute -bottom-6 -right-3 text-[8rem] text-[#38BDF8]/[0.04]" aria-hidden="true"></i>
@@ -356,6 +373,8 @@
       </div>
     </section>
 
+      <!-- SECTION funcionalidades -->
+
     <section id="funcionalidades" class="scroll-mt-20 bg-[#05070D]/65 backdrop-blur-sm">
       <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 md:px-8 md:py-24 lg:grid-cols-2 lg:gap-20">
         <!-- Descrição das funcionalidades -->
@@ -374,6 +393,7 @@
           </p>
 
           <!-- Lista de funcionalidades -->
+
           <div class="mt-10 space-y-8">
             <!-- Funcionalidade 1 -->
             <div class="flex gap-4">
@@ -436,7 +456,7 @@
           </a>
         </div>
 
-        <!-- INÍCIO: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 — ADAPTADO PARA O MELODIA -->
+        <!-- TEMPLATE IMPORTADO DO UIVERSE.IO PARA PARTE DE FUNCIONALIDADES -->
         <div data-reveal="right" data-delay="120" class="flex justify-center lg:justify-end">
           <section class="melodia-fila" aria-labelledby="titulo-fila-musical">
             <div class="melodia-fila__cabecalho">
@@ -498,10 +518,10 @@
             </ol>
           </section>
         </div>
-        <!-- FIM: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 -->
       </div>
     </section>
 
+      <!-- SECTION PARTE DE DEPOIMENTOS CLIENTES -->
     <section id="depoimentos"
       class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]/80 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
@@ -520,7 +540,7 @@
           </p>
         </div>
 
-        <!-- Lista de depoimentos -->
+          <!-- Lista de depoimentos -->
         <div class="mt-14 grid overflow-hidden rounded-2xl border border-white/10 bg-[#05070D]/45 shadow-2xl shadow-black/20 md:grid-cols-3">
           <!-- Depoimento 1 -->
           <article data-reveal class="flex flex-col border-b border-[#12304A] p-7 transition-colors hover:bg-[#071A33]/70 sm:p-8 md:border-b-0 md:border-r">
@@ -600,6 +620,7 @@
       </div>
     </section>
 
+        <!-- SECTION CONTATOS -->
     <section id="contato" class="scroll-mt-20 bg-[#05070D]/65 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <div
@@ -629,7 +650,7 @@
               </p>
             </div>
 
-            <!-- Formulário -->
+            <!-- PARTE DO Formulário -->
             <form id="formulario-contato" data-reveal="right" data-delay="120"
               class="grid gap-4 rounded-2xl border border-white/10 bg-[#05070D]/55 p-5 backdrop-blur-md sm:grid-cols-2 sm:p-6">
               <div>
@@ -695,11 +716,11 @@
     </section>
   </main>
 
+    <!-- INICIO DO FOOTER -->
   <footer class="relative z-10 border-t border-[#12304A] bg-[#05070D]/85 backdrop-blur-md">
     <div class="mx-auto max-w-7xl px-5 py-12 md:px-8">
-      <!-- Parte principal do rodapé -->
       <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        <!-- Logo e descrição -->
+        <!-- Logo e descriçao -->
         <div>
           <a href="#inicio" aria-label="Voltar ao início" class="block w-fit">
             <span class="relative block h-9 w-44 overflow-hidden">
@@ -713,7 +734,7 @@
           </p>
         </div>
 
-        <!-- Redes sociais -->
+        <!-- parte de redes socias -->
         <div class="md:text-right">
           <p class="text-sm font-semibold text-[#F8FAFC]">Siga o Melodia</p>
 
@@ -738,7 +759,7 @@
         </div>
       </div>
 
-      <!-- Navegação horizontal -->
+      <!-- Nav Horizontal-->
       <nav aria-label="Navegação do rodapé"
         class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-y border-[#12304A] py-5 text-sm font-medium">
         <a href="#inicio" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Início</a>
@@ -748,7 +769,7 @@
         <a href="#contato" class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">Contato</a>
       </nav>
 
-      <!-- Parte inferior -->
+      <!-- Parte inferior do footer -->
       <div
         class="mt-6 flex flex-col gap-4 text-sm text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Melodia. Todos os direitos reservados.</p>
@@ -764,5 +785,4 @@
   <script src="./scripts/animacao.js"></script>
   <script src="./scripts/musica.js"></script>
 </body>
-
 </html>

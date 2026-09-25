@@ -1,4 +1,6 @@
-// Animações de entrada e rolagem
+
+// ANIMACAO DE ENTRADA DO SITE E ROLAGEM
+
 const elementosAnimados = document.querySelectorAll("[data-reveal]");
 const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
