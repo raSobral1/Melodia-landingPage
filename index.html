@@ -8,7 +8,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" />
-  <link rel="stylesheet" href="./styles/global.css?v=2" />
+  <link rel="stylesheet" href="./styles/global.css?v=3" />
   <link rel="icon" href="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png">
 
   <title>Melodia</title>
@@ -103,7 +103,7 @@
 
     <section id="inicio" class="scroll-mt-20">
       <div
-        class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 md:px-8 md:py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.75fr)] lg:gap-20">
+        class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 md:px-8 md:py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.75fr)] lg:gap-20 lg:py-14">
         <!-- Conteúdo textual -->
         <div class="max-w-2xl text-left">
           <p data-reveal data-delay="0" class="mb-6 flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
@@ -142,15 +142,16 @@
 
         <!-- Player musical -->
         <div data-reveal="right" data-delay="180" class="relative flex w-full justify-center lg:justify-end">
-          <div class="relative w-full max-w-md">
-            <div class="absolute -inset-3 hidden border border-[#38BDF8]/10 sm:block" aria-hidden="true"></div>
-            <div
-              class="relative w-full border border-white/10 bg-[#07111F]/75 p-5 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-6">
+          <div class="w-full max-w-sm space-y-5">
+            <div class="relative">
+              <div class="absolute -inset-2 hidden border border-[#38BDF8]/10 sm:block" aria-hidden="true"></div>
+              <div
+                class="relative w-full border border-white/10 bg-[#07111F]/75 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-5">
             <audio id="audio-player" preload="metadata">
               <source src="./assets/audios/blip-stream.mp3" type="audio/mpeg" />
             </audio>
 
-            <div class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+            <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
               <span class="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#64748B]">Player / 01</span>
               <i class="fa-solid fa-wave-square text-sm text-[#38BDF8]" aria-hidden="true"></i>
             </div>
@@ -158,7 +159,7 @@
             <!-- Informações da música -->
             <div class="flex items-center gap-4">
               <!-- Ícone do Melodia -->
-              <div class="relative h-24 w-24 shrink-0 overflow-hidden border border-[#38BDF8]/30 bg-[#05070D] rounded-lg">
+              <div class="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-[#38BDF8]/30 bg-[#05070D]">
                 <img src="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png"
                   alt="Ícone do Melodia" class="absolute left-1/2 top-1/2 h-[122%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover" />
               </div>
@@ -168,7 +169,7 @@
                   Tocando agora
                 </p>
 
-                <h2 class="mt-2 truncate text-xl font-semibold text-[#F8FAFC]">
+                <h2 class="mt-1 truncate text-lg font-semibold text-[#F8FAFC]">
                   Blip Stream
                 </h2>
 
@@ -179,7 +180,7 @@
             </div>
 
             <!-- Barra de progresso -->
-            <div class="mt-7">
+            <div class="mt-5">
               <label for="progresso-musica" class="sr-only">Progresso da música</label>
               <input id="progresso-musica" type="range" min="0" max="100" value="0" step="0.1"
                 class="h-1 w-full cursor-pointer accent-[#38BDF8]" />
@@ -191,7 +192,7 @@
             </div>
 
             <!-- Controles -->
-            <div class="mt-5 flex items-center justify-center gap-6">
+            <div class="mt-4 flex items-center justify-center gap-5">
               <button id="botao-mudo" type="button" aria-label="Desativar som" aria-pressed="false"
                 class="text-[#94A3B8] transition-colors hover:text-[#38BDF8]">
                 <i id="icone-volume" class="fa-solid fa-volume-high" aria-hidden="true"></i>
@@ -203,7 +204,7 @@
               </button>
 
               <button id="botao-play" type="button" aria-label="Reproduzir música"
-                class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#38BDF8] text-xl text-[#05070D] transition-colors hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#38BDF8] text-lg text-[#05070D] transition-colors hover:bg-[#60A5FA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BAE6FD]">
                 <i id="icone-play" class="fa-solid fa-play" aria-hidden="true"></i>
               </button>
 
@@ -218,12 +219,43 @@
               </button>
             </div>
 
-            <p class="mt-5 text-center text-xs text-[#64748B]">
+            <p class="mt-4 text-center text-[0.65rem] text-[#64748B]">
               “Blip Stream” — Kevin MacLeod ·
               <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer"
                 class="transition-colors hover:text-[#38BDF8]">CC BY 4.0</a>
             </p>
+              </div>
             </div>
+
+            <!-- Template adaptado de Uiverse.io por Itskrish01 -->
+            <article
+              class="group relative overflow-hidden rounded-2xl border border-[#38BDF8]/20 bg-gradient-to-br from-[#07111F]/95 to-[#05070D]/95 p-5 text-center shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#38BDF8]/50 hover:shadow-[#38BDF8]/10">
+              <div class="absolute inset-0 bg-gradient-to-tr from-[#38BDF8]/5 via-transparent to-[#2563EB]/10 opacity-50 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true"></div>
+              <div class="absolute -bottom-16 -left-12 h-36 w-36 rounded-full bg-[#38BDF8]/10 blur-3xl transition-transform duration-700 group-hover:scale-125" aria-hidden="true"></div>
+
+              <div class="relative">
+                <div class="relative mx-auto mb-4 h-16 w-16 transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105">
+                  <div class="absolute -inset-2 rounded-2xl border border-[#38BDF8]/20 opacity-60 group-hover:animate-pulse" aria-hidden="true"></div>
+                  <div class="relative h-full w-full overflow-hidden rounded-2xl bg-white">
+                    <img src="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png"
+                      alt="Logo do Melodia" class="absolute left-1/2 top-1/2 h-[122%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover" />
+                  </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-[#38BDF8]">Melodia</h2>
+                <p class="mt-1 font-semibold text-[#F8FAFC]">Seu perfil musical</p>
+                <p class="mx-auto mt-2 max-w-xs text-sm leading-6 text-[#94A3B8]">
+                  Reúna suas playlists, faixas favoritas e descubra novos sons.
+                </p>
+
+                <div class="mx-auto mt-4 h-px w-20 bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent transition-all duration-500 group-hover:w-32" aria-hidden="true"></div>
+                <div class="mt-3 flex justify-center gap-2" aria-hidden="true">
+                  <span class="h-1.5 w-1.5 animate-bounce rounded-full bg-[#38BDF8]"></span>
+                  <span class="h-1.5 w-1.5 animate-bounce rounded-full bg-[#38BDF8] [animation-delay:120ms]"></span>
+                  <span class="h-1.5 w-1.5 animate-bounce rounded-full bg-[#38BDF8] [animation-delay:240ms]"></span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -406,107 +438,69 @@
           </a>
         </div>
 
-        <!-- Representação da biblioteca musical -->
-        <div data-reveal="right" data-delay="120"
-          class="rounded-2xl border border-white/10 bg-[#07111F]/80 p-5 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-7">
-          <!-- Cabeçalho da biblioteca -->
-          <div class="flex items-center justify-between border-b border-[#12304A] pb-5">
-            <div>
-              <p class="text-sm text-[#38BDF8]">Melodia</p>
+        <!-- INÍCIO: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 — ADAPTADO PARA O MELODIA -->
+        <div data-reveal="right" data-delay="120" class="flex justify-center lg:justify-end">
+          <section class="melodia-fila" aria-labelledby="titulo-fila-musical">
+            <div class="melodia-fila__cabecalho">
+              <div class="melodia-fila__logo">
+                <img src="./assets/39430a89-ed6a-45b8-a937-7a96d77af339-removebg-preview.png"
+                  alt="Logo do Melodia" />
+              </div>
 
-              <h3 class="mt-1 text-xl font-semibold text-[#F8FAFC]">
-                Sua biblioteca
-              </h3>
+              <div>
+                <p class="melodia-fila__marca">Melodia</p>
+                <h3 id="titulo-fila-musical">Tocando agora</h3>
+              </div>
+
+              <span class="melodia-fila__status"><i aria-hidden="true"></i>Ao vivo</span>
             </div>
 
-            <button type="button" aria-label="Adicionar música"
-              class="flex h-10 w-10 items-center justify-center rounded-md border border-[#12304A] text-[#38BDF8] transition-colors hover:border-[#38BDF8] hover:bg-[#071A33]">
-              <i class="fa-solid fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
+            <ol class="melodia-fila__lista">
+              <li class="melodia-fila__item melodia-fila__item--ativo">
+                <div class="melodia-fila__equalizador" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="melodia-fila__capa melodia-fila__capa--azul"><span>01</span></div>
+                <div class="melodia-fila__musica">
+                  <strong>Blip Stream</strong>
+                  <span>Kevin MacLeod</span>
+                </div>
+                <span class="melodia-fila__tempo">4:45</span>
+              </li>
 
-          <!-- Música em destaque -->
-          <div class="mt-6 flex items-center gap-4">
-            <div
-              class="flex h-20 w-20 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#0F4C81] to-[#38BDF8]">
-              <i class="fa-solid fa-music text-2xl text-[#F8FAFC]" aria-hidden="true"></i>
-            </div>
+              <li class="melodia-fila__item">
+                <span class="melodia-fila__play" aria-hidden="true"></span>
+                <div class="melodia-fila__capa"><span>02</span></div>
+                <div class="melodia-fila__musica">
+                  <strong>Céu aberto</strong>
+                  <span>Aurora</span>
+                </div>
+                <span class="melodia-fila__tempo">3:24</span>
+              </li>
 
-            <div class="min-w-0 flex-1">
-              <p class="truncate text-lg font-semibold text-[#F8FAFC]">
-                Boa vibração
-              </p>
+              <li class="melodia-fila__item">
+                <span class="melodia-fila__play" aria-hidden="true"></span>
+                <div class="melodia-fila__capa"><span>03</span></div>
+                <div class="melodia-fila__musica">
+                  <strong>Movimento</strong>
+                  <span>Horizonte Azul</span>
+                </div>
+                <span class="melodia-fila__tempo">2:56</span>
+              </li>
 
-              <p class="mt-1 truncate text-sm text-[#94A3B8]">
-                Playlist para melhorar o seu dia
-              </p>
-            </div>
-
-            <button type="button" aria-label="Reproduzir playlist"
-              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#38BDF8] text-[#05070D] transition-colors hover:bg-[#60A5FA]">
-              <i class="fa-solid fa-play" aria-hidden="true"></i>
-            </button>
-          </div>
-
-          <!-- Lista de músicas -->
-          <ol class="mt-7 divide-y divide-[#12304A]">
-            <li class="flex items-center gap-4 py-4">
-              <span class="w-5 text-sm text-[#94A3B8]"> 1 </span>
-
-              <div class="min-w-0 flex-1">
-                <p class="truncate font-medium text-[#F8FAFC]">Céu aberto</p>
-
-                <p class="mt-1 truncate text-sm text-[#94A3B8]">Aurora</p>
-              </div>
-
-              <span class="text-sm text-[#94A3B8]"> 3:24 </span>
-            </li>
-
-            <li class="flex items-center gap-4 py-4">
-              <span class="w-5 text-sm text-[#94A3B8]"> 2 </span>
-
-              <div class="min-w-0 flex-1">
-                <p class="truncate font-medium text-[#F8FAFC]">Movimento</p>
-
-                <p class="mt-1 truncate text-sm text-[#94A3B8]">
-                  Horizonte Azul
-                </p>
-              </div>
-
-              <span class="text-sm text-[#94A3B8]"> 2:56 </span>
-            </li>
-
-            <li class="flex items-center gap-4 py-4">
-              <span class="w-5 text-sm text-[#94A3B8]"> 3 </span>
-
-              <div class="min-w-0 flex-1">
-                <p class="truncate font-medium text-[#F8FAFC]">
-                  Novos planos
-                </p>
-
-                <p class="mt-1 truncate text-sm text-[#94A3B8]">
-                  Linha do Tempo
-                </p>
-              </div>
-
-              <span class="text-sm text-[#94A3B8]"> 3:41 </span>
-            </li>
-
-            <li class="flex items-center gap-4 py-4">
-              <span class="w-5 text-sm text-[#94A3B8]"> 4 </span>
-
-              <div class="min-w-0 flex-1">
-                <p class="truncate font-medium text-[#F8FAFC]">Lua cheia</p>
-
-                <p class="mt-1 truncate text-sm text-[#94A3B8]">
-                  Maré Noturna
-                </p>
-              </div>
-
-              <span class="text-sm text-[#94A3B8]"> 4:02 </span>
-            </li>
-          </ol>
+              <li class="melodia-fila__item">
+                <span class="melodia-fila__play" aria-hidden="true"></span>
+                <div class="melodia-fila__capa"><span>04</span></div>
+                <div class="melodia-fila__musica">
+                  <strong>Lua cheia</strong>
+                  <span>Maré Noturna</span>
+                </div>
+                <span class="melodia-fila__tempo">4:02</span>
+              </li>
+            </ol>
+          </section>
         </div>
+        <!-- FIM: TEMPLATE IMPORTADO DO UIVERSE.IO POR PRAASHOO7 -->
       </div>
     </section>
 
@@ -514,7 +508,7 @@
       class="scroll-mt-20 border-y border-[#12304A] bg-[#07111F]/80 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <!-- Título -->
-        <div data-reveal class="max-w-2xl">
+        <div data-reveal class="mx-auto max-w-3xl text-center">
           <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#38BDF8] md:text-sm">
             Depoimentos
           </p>
@@ -523,25 +517,29 @@
             O que os ouvintes dizem
           </h2>
 
-          <p class="mt-5 text-base leading-7 text-[#94A3B8] md:text-lg">
+          <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#94A3B8] md:text-lg">
             Pessoas que transformaram seus momentos com música.
           </p>
         </div>
 
         <!-- Lista de depoimentos -->
-        <div class="mt-14 grid gap-10 md:grid-cols-3">
+        <div class="mt-14 grid overflow-hidden rounded-2xl border border-white/10 bg-[#05070D]/45 shadow-2xl shadow-black/20 md:grid-cols-3">
           <!-- Depoimento 1 -->
-          <article data-reveal class="border-t border-[#12304A] pt-8">
-            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+          <article data-reveal class="flex flex-col border-b border-[#12304A] p-7 transition-colors hover:bg-[#071A33]/70 sm:p-8 md:border-b-0 md:border-r">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-[0.25em] text-[#38BDF8]">01 / OUVINTE</span>
+              <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]/30" aria-hidden="true"></i>
+            </div>
 
-            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+            <blockquote class="mt-8 flex-1 text-lg leading-8 text-[#F8FAFC]">
               “O Melodia transformou meus dias. As playlists são incríveis e
               sempre encontro músicas novas.”
             </blockquote>
 
-            <div class="mt-8 flex items-center gap-4">
-              <img src="./assets/images/depoimento-1.jpg" alt="Foto de Camila Souza"
-                class="h-12 w-12 rounded-full object-cover" />
+            <div class="mt-10 flex items-center gap-4 border-t border-white/10 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#38BDF8]">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+              </div>
 
               <div>
                 <p class="font-semibold text-[#F8FAFC]">Camila Souza</p>
@@ -552,17 +550,21 @@
           </article>
 
           <!-- Depoimento 2 -->
-          <article data-reveal data-delay="100" class="border-t border-[#12304A] pt-8">
-            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+          <article data-reveal data-delay="100" class="flex flex-col border-b border-[#12304A] p-7 transition-colors hover:bg-[#071A33]/70 sm:p-8 md:border-b-0 md:border-r">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-[0.25em] text-[#38BDF8]">02 / OUVINTE</span>
+              <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]/30" aria-hidden="true"></i>
+            </div>
 
-            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+            <blockquote class="mt-8 flex-1 text-lg leading-8 text-[#F8FAFC]">
               “A interface é simples e intuitiva. É exatamente o que eu
               precisava para manter minhas músicas organizadas.”
             </blockquote>
 
-            <div class="mt-8 flex items-center gap-4">
-              <img src="./assets/images/depoimento-2.jpg" alt="Foto de Rafael Lima"
-                class="h-12 w-12 rounded-full object-cover" />
+            <div class="mt-10 flex items-center gap-4 border-t border-white/10 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#38BDF8]">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+              </div>
 
               <div>
                 <p class="font-semibold text-[#F8FAFC]">Rafael Lima</p>
@@ -573,17 +575,21 @@
           </article>
 
           <!-- Depoimento 3 -->
-          <article data-reveal data-delay="200" class="border-t border-[#12304A] pt-8">
-            <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]" aria-hidden="true"></i>
+          <article data-reveal data-delay="200" class="flex flex-col p-7 transition-colors hover:bg-[#071A33]/70 sm:p-8">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-[0.25em] text-[#38BDF8]">03 / OUVINTE</span>
+              <i class="fa-solid fa-quote-left text-2xl text-[#38BDF8]/30" aria-hidden="true"></i>
+            </div>
 
-            <blockquote class="mt-6 leading-7 text-[#F8FAFC]">
+            <blockquote class="mt-8 flex-1 text-lg leading-8 text-[#F8FAFC]">
               “Descobri artistas incríveis pelo Melodia. A experiência é leve,
               bonita e muito fácil de usar.”
             </blockquote>
 
-            <div class="mt-8 flex items-center gap-4">
-              <img src="./assets/images/depoimento-3.jpg" alt="Foto de Juliana Martins"
-                class="h-12 w-12 rounded-full object-cover" />
+            <div class="mt-10 flex items-center gap-4 border-t border-white/10 pt-5">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#38BDF8]">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+              </div>
 
               <div>
                 <p class="font-semibold text-[#F8FAFC]">Juliana Martins</p>
